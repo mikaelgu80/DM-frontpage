@@ -1,0 +1,168 @@
+{
+  "brand": {
+    "kicker": "WCO / DATA MODEL",
+    "name": "Data Model",
+    "markLabel": "DM"
+  },
+  "hero": {
+    "eyebrow": "GLOBAL TRADE INTEROPERABILITY",
+    "title": "One language for global trade.",
+    "lead": "A shared semantic foundation for Customs, border agencies and the systems that move information across borders.",
+    "primaryCta": "Enter the Data Model",
+    "secondaryCta": "See how it works"
+  },
+  "signal": {
+    "eyebrow": "A COMMON FOUNDATION",
+    "title": "Movement is global. Meaning has to travel with it.",
+    "body": "The WCO Data Model harmonizes definitions, structures and reusable information for cross-border exchange — allowing different systems and mandates to communicate without losing meaning.",
+    "labels": [
+      "Customs",
+      "Border agencies",
+      "Trade",
+      "Transport",
+      "Single Window",
+      "Systems"
+    ]
+  },
+  "executive": {
+    "eyebrow": "THE STRATEGIC CASE",
+    "title": "Standardize once. Reuse across the border ecosystem.",
+    "body": "For decision-makers, the Data Model is not another technical format. It is shared infrastructure: a way to reduce translation between systems, make requirements reusable and create a more stable foundation for digital border transformation.",
+    "points": [
+      {
+        "number": "01",
+        "title": "Interoperability by design",
+        "body": "Align information before implementation choices turn into integration problems."
+      },
+      {
+        "number": "02",
+        "title": "Reuse instead of reinvention",
+        "body": "Build on common definitions and structures across processes, agencies and initiatives."
+      },
+      {
+        "number": "03",
+        "title": "A foundation that can evolve",
+        "body": "Keep meaning stable while technologies, channels and implementation patterns change."
+      }
+    ],
+    "statement": "The value is not in making every system identical. It is in giving different systems a dependable way to understand one another."
+  },
+  "principles": {
+    "eyebrow": "A QUIET KIND OF INFRASTRUCTURE",
+    "title": "Invisible when it works. Essential when systems meet.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Shared vocabulary",
+        "body": "Clear, harmonized definitions create a common semantic layer across organizations and systems."
+      },
+      {
+        "number": "02",
+        "title": "Reusable structure",
+        "body": "Classes, attributes and Information Packages turn a shared vocabulary into consistent information models."
+      },
+      {
+        "number": "03",
+        "title": "Technology neutral",
+        "body": "Meaning and structure remain stable while implementations can evolve across XML, JSON, APIs and other exchange patterns."
+      }
+    ]
+  },
+  "architecture": {
+    "eyebrow": "FROM POLICY TO PAYLOAD",
+    "title": "The closer you get, the more technical it becomes.",
+    "body": "Start with the business context. Move through a semantic model. Finish with structures systems can implement.",
+    "layers": [
+      {
+        "label": "BUSINESS",
+        "title": "Processes & requirements",
+        "body": "The operational and legal context that defines what information must be exchanged."
+      },
+      {
+        "label": "SEMANTIC",
+        "title": "Library & information model",
+        "body": "Definitions, classes, attributes, relationships, cardinalities and Information Packages."
+      },
+      {
+        "label": "MESSAGE",
+        "title": "Electronic exchange",
+        "body": "Implementation structures for interoperable machine-to-machine exchange."
+      }
+    ]
+  },
+  "release": {
+    "eyebrow": "RELEASE CHANNEL",
+    "currentLabel": "Current",
+    "currentVersion": "4.3.0",
+    "status": "Available in the Data Model App",
+    "note": "Release information is externalized for this prototype. A production service could populate current and upcoming release information from an API or database."
+  },
+  "app": {
+    "eyebrow": "WORK WITH THE MODEL",
+    "title": "Now enter the working layer.",
+    "body": "The front page earns attention; the application gets work done. Core Data Model destinations stay prominent and specialist functions remain immediately available from the fixed Tools menu.",
+    "primaryTools": [
+      {
+        "icon": "library",
+        "title": "Library",
+        "caption": "Classes and Attributes",
+        "href": "#/dataset/index"
+      },
+      {
+        "icon": "package",
+        "title": "Information Packages",
+        "caption": "Explore reusable information structures",
+        "href": "#/infopack/scope/global"
+      },
+      {
+        "icon": "maintenance",
+        "title": "Data Maintenance Requests",
+        "caption": "Edit and submit DMRs",
+        "href": "#/dmr/index"
+      }
+    ],
+    "secondaryTools": [
+      {
+        "title": "Download",
+        "caption": "WCO DM downloadable",
+        "href": "#/package"
+      },
+      {
+        "title": "Joint Implementation ToolBox",
+        "caption": "List of MIGs",
+        "href": "#/infopage/mig"
+      },
+      {
+        "title": "Mapping Tool",
+        "caption": "My National Dataset",
+        "href": "#/mydataset/index"
+      },
+      {
+        "title": "My Information Package Repository",
+        "caption": "My National infopack",
+        "href": "#/infopack/scope/national"
+      },
+      {
+        "title": "Guidance",
+        "caption": "WCO DM Guidance",
+        "href": "#/wiki/index"
+      },
+      {
+        "title": "Contact Us",
+        "caption": "Need support?",
+        "href": "#/user/contact"
+      }
+    ]
+  },
+  "video": {
+    "eyebrow": "A SHORT INTRODUCTION",
+    "title": "See the Data Model in context.",
+    "body": "The film waits until it is fully in view. It may autoplay muted once on this browser; after that, playback is always your choice.",
+    "youtubeId": "UUn4YtzKnjs",
+    "autoplayStorageKey": "wcoDmIntroAutoplaySeen-v2"
+  },
+  "footer": {
+    "line": "A concept for a modern WCO Data Model experience.",
+    "note": "Prototype v2.1 — alternate identity, placeholder links and demo content."
+  }
+}

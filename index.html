@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04080d">
+  <meta name="description" content="Concept front page for the WCO Data Model">
+  <title>WCO Data Model — Front Page Concept v2.1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="world-canvas" aria-hidden="true"></canvas>
+  <div class="world-vignette" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#top" aria-label="Data Model home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 52 52" role="img">
+          <path class="mark-shell" d="M26 2.5c12.98 0 23.5 10.52 23.5 23.5S38.98 49.5 26 49.5 2.5 38.98 2.5 26 13.02 2.5 26 2.5Z"/>
+          <path class="mark-flow" d="M10.5 27.5c6.2-6.4 12.3-9.6 18.2-9.6 5.15 0 9.44 1.82 12.8 5.45M10.5 34.5c5-4.03 10.07-6.05 15.2-6.05 5.95 0 11.22 2.57 15.8 7.7"/>
+          <circle cx="12" cy="27" r="1.7"/><circle cx="41" cy="23.1" r="1.7"/>
+        </svg>
+      </span>
+      <span class="brand-copy"><span class="brand-kicker">WCO /</span><strong>DATA MODEL</strong></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#why">Why</a>
+      <a href="#value">Value</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#app">Application</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="text-action" href="#app">Log in</a>
+      <button class="menu-button" id="menu-button" type="button" aria-controls="app-drawer" aria-expanded="false">
+        <span>Tools</span><i aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <aside class="drawer" id="app-drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close-drawer></div>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <span class="micro-label">APPLICATION</span>
+        <button class="drawer-close" type="button" data-close-drawer aria-label="Close application menu">×</button>
+      </div>
+      <div class="drawer-intro">
+        <p>Data Model tools</p>
+        <span>The working layer remains independent from the front-page story.</span>
+      </div>
+      <nav id="drawer-tools" class="drawer-tools" aria-label="Application tools"></nav>
+    </div>
+  </aside>
+
+  <main id="top">
+    <section class="hero section-shell dark-section" id="hero" data-world="1">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 id="hero-title"></h1>
+        <p class="hero-lead" id="hero-lead"></p>
+        <div class="hero-actions">
+          <a class="button primary" id="hero-primary" href="#app"></a>
+          <a class="button ghost" id="hero-secondary" href="#why"></a>
+        </div>
+      </div>
+
+      <div class="hero-caption" data-parallax="0.03" aria-hidden="true">
+        <span>GLOBAL SEMANTIC INFRASTRUCTURE</span>
+        <i></i>
+        <span>TRADE / TRANSPORT / BORDER</span>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true"><span>SCROLL TO EXPLORE</span><i></i></div>
+    </section>
+
+    <section class="signal-section section-shell dark-section" id="why" data-world="1">
+      <div class="signal-layout">
+        <div class="section-copy sticky-copy" data-parallax="0.018">
+          <p class="eyebrow" id="signal-eyebrow"></p>
+          <h2 id="signal-title"></h2>
+          <p id="signal-body"></p>
+        </div>
+
+        <div class="semantic-orbit" data-reveal aria-label="Illustration of different actors exchanging meaning through the Data Model">
+          <div class="semantic-core">
+            <span class="semantic-core-kicker">SHARED MEANING</span>
+            <strong>DM</strong>
+            <small>semantic foundation</small>
+          </div>
+          <div class="semantic-labels" id="signal-labels"></div>
+          <div class="orbit-line orbit-line-a"></div>
+          <div class="orbit-line orbit-line-b"></div>
+          <div class="orbit-line orbit-line-c"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="executive-section light-section" id="value" data-light-section>
+      <div class="light-curve light-curve-top" aria-hidden="true"></div>
+      <div class="executive-atmosphere" aria-hidden="true">
+        <span class="executive-line line-a" data-parallax="-0.018"></span>
+        <span class="executive-line line-b" data-parallax="0.012"></span>
+        <span class="executive-line line-c" data-parallax="-0.008"></span>
+        <span class="executive-word word-a" data-parallax="0.028">INTEROPERABILITY</span>
+        <span class="executive-word word-b" data-parallax="-0.022">REUSE</span>
+      </div>
+
+      <div class="section-shell executive-inner">
+        <div class="executive-intro" data-reveal>
+          <p class="eyebrow dark-ink" id="executive-eyebrow"></p>
+          <h2 id="executive-title"></h2>
+          <p id="executive-body"></p>
+        </div>
+
+        <div class="value-stream" id="executive-points"></div>
+
+        <div class="executive-statement" data-reveal>
+          <span class="statement-index">THE MANAGEMENT VIEW</span>
+          <p id="executive-statement"></p>
+        </div>
+      </div>
+      <div class="light-curve light-curve-bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="principles section-shell dark-section" id="principles" data-world="0.72">
+      <div class="principle-intro" data-reveal>
+        <p class="eyebrow" id="principles-eyebrow"></p>
+        <h2 id="principles-title"></h2>
+      </div>
+      <div class="principle-list" id="principle-list"></div>
+    </section>
+
+    <section class="architecture section-shell dark-section" id="architecture" data-world="0.62">
+      <div class="architecture-head" data-reveal>
+        <div>
+          <p class="eyebrow" id="architecture-eyebrow"></p>
+          <h2 id="architecture-title"></h2>
+        </div>
+        <p id="architecture-body"></p>
+      </div>
+      <div class="layer-stream" id="layer-stack"></div>
+    </section>
+
+    <section class="release section-shell dark-section" id="release" data-world="0.55">
+      <div class="release-orb" data-reveal>
+        <div class="release-meta">
+          <p class="eyebrow" id="release-eyebrow"></p>
+          <span class="live-pill"><i></i><span id="release-current-label"></span></span>
+        </div>
+        <div class="release-version" id="release-version"></div>
+        <div class="release-bottom">
+          <strong id="release-status"></strong>
+          <p id="release-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-section section-shell dark-section" id="app" data-world="0.45">
+      <div class="app-head" data-reveal>
+        <div>
+          <p class="eyebrow" id="app-eyebrow"></p>
+          <h2 id="app-title"></h2>
+        </div>
+        <p id="app-body"></p>
+      </div>
+      <div class="tool-cluster" id="primary-tools"></div>
+      <div class="secondary-stream" id="secondary-tools"></div>
+    </section>
+
+    <section class="film-section section-shell dark-section" id="film" data-world="0.38">
+      <div class="film-copy" data-reveal>
+        <p class="eyebrow" id="video-eyebrow"></p>
+        <h2 id="video-title"></h2>
+        <p id="video-body"></p>
+      </div>
+      <div class="video-shell" id="video-shell" data-reveal>
+        <div class="video-placeholder" id="video-placeholder">
+          <div class="video-horizon" aria-hidden="true"></div>
+          <div class="video-meta">
+            <span class="micro-label">WCO DATA MODEL / FILM</span>
+            <button id="manual-play" class="play-button" type="button" aria-label="Play WCO Data Model video">
+              <span class="play-icon"></span>
+              <span>Play film</span>
+            </button>
+          </div>
+          <span class="video-duration">VIDEO</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell dark-section">
+    <div class="footer-brand">
+      <span class="brand-mark small" aria-hidden="true">
+        <svg viewBox="0 0 52 52"><path class="mark-shell" d="M26 2.5c12.98 0 23.5 10.52 23.5 23.5S38.98 49.5 26 49.5 2.5 38.98 2.5 26 13.02 2.5 26 2.5Z"/><path class="mark-flow" d="M10.5 27.5c6.2-6.4 12.3-9.6 18.2-9.6 5.15 0 9.44 1.82 12.8 5.45M10.5 34.5c5-4.03 10.07-6.05 15.2-6.05 5.95 0 11.22 2.57 15.8 7.7"/></svg>
+      </span>
+      <div><strong>WCO / DATA MODEL</strong><p id="footer-line"></p></div>
+    </div>
+    <p class="footer-note" id="footer-note"></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
