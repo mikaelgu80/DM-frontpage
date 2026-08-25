@@ -98,7 +98,11 @@
     </section>
 
     <section class="executive-section light-section" id="value" data-light-section>
-      <div class="light-curve light-curve-top" aria-hidden="true"></div>
+      <div class="light-curve light-curve-top" aria-hidden="true">
+        <svg viewBox="0 0 1000 140" preserveAspectRatio="none" focusable="false">
+          <path d="M0 48H220C285 48 310 82 500 82C690 82 715 48 780 48H1000V140H0Z"></path>
+        </svg>
+      </div>
       <div class="executive-atmosphere" aria-hidden="true">
         <span class="executive-line line-a" data-parallax="-0.018"></span>
         <span class="executive-line line-b" data-parallax="0.012"></span>
@@ -120,8 +124,33 @@
           <span class="statement-index">THE MANAGEMENT VIEW</span>
           <p id="executive-statement"></p>
         </div>
+
+        <div class="executive-film">
+          <div class="film-copy" data-reveal>
+            <p class="eyebrow dark-ink" id="video-eyebrow"></p>
+            <h2 id="video-title"></h2>
+            <p id="video-body"></p>
+          </div>
+          <div class="video-shell" id="video-shell" data-reveal>
+            <div class="video-placeholder" id="video-placeholder">
+              <div class="video-horizon" aria-hidden="true"></div>
+              <div class="video-meta">
+                <span class="micro-label">WCO DATA MODEL / FILM</span>
+                <button id="manual-play" class="play-button" type="button" aria-label="Play WCO Data Model video">
+                  <span class="play-icon"></span>
+                  <span>Play film</span>
+                </button>
+              </div>
+              <span class="video-duration">VIDEO</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="light-curve light-curve-bottom" aria-hidden="true"></div>
+      <div class="light-curve light-curve-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1000 140" preserveAspectRatio="none" focusable="false">
+          <path d="M0 0H1000V92H780C715 92 690 58 500 58C310 58 285 92 220 92H0Z"></path>
+        </svg>
+      </div>
     </section>
 
     <section class="principles section-shell dark-section" id="principles" data-world="0.72">
@@ -141,6 +170,18 @@
         <p id="architecture-body"></p>
       </div>
       <div class="layer-stream" id="layer-stack"></div>
+    </section>
+
+    <section class="metrics section-shell dark-section" id="metrics" data-world="0.58">
+      <div class="metrics-head" data-reveal>
+        <div>
+          <p class="eyebrow" id="metrics-eyebrow"></p>
+          <h2 id="metrics-title"></h2>
+        </div>
+        <p id="metrics-body"></p>
+      </div>
+      <div class="metric-stream" id="metric-stream"></div>
+      <p class="metrics-note" id="metrics-note" data-reveal></p>
     </section>
 
     <section class="release section-shell dark-section" id="release" data-world="0.55">
@@ -169,26 +210,6 @@
       <div class="secondary-stream" id="secondary-tools"></div>
     </section>
 
-    <section class="film-section section-shell dark-section" id="film" data-world="0.38">
-      <div class="film-copy" data-reveal>
-        <p class="eyebrow" id="video-eyebrow"></p>
-        <h2 id="video-title"></h2>
-        <p id="video-body"></p>
-      </div>
-      <div class="video-shell" id="video-shell" data-reveal>
-        <div class="video-placeholder" id="video-placeholder">
-          <div class="video-horizon" aria-hidden="true"></div>
-          <div class="video-meta">
-            <span class="micro-label">WCO DATA MODEL / FILM</span>
-            <button id="manual-play" class="play-button" type="button" aria-label="Play WCO Data Model video">
-              <span class="play-icon"></span>
-              <span>Play film</span>
-            </button>
-          </div>
-          <span class="video-duration">VIDEO</span>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer section-shell dark-section">

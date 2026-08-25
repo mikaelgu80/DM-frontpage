@@ -90,6 +90,28 @@
       }
     ]
   },
+  "metrics": {
+    "eyebrow": "THE MODEL IN NUMBERS",
+    "title": "A working standard, not a concept.",
+    "body": "Behind the shared language is a maintained technical model: reusable elements, structured classes, Information Packages and published mappings that can be implemented in real systems.",
+    "items": [
+      {
+        "id": "elements",
+        "primary": {"value": 2134, "label": "unique elements"},
+        "secondary": {"value": 210, "label": "classes"}
+      },
+      {
+        "id": "informationPackages",
+        "primary": {"value": 2, "label": "base Information Packages"},
+        "secondary": {"value": 6, "label": "derived Information Packages"}
+      },
+      {
+        "id": "nationalMappings",
+        "primary": {"value": 3, "label": "published national mappings"}
+      }
+    ],
+    "note": "Prototype values. In production, these figures can be populated directly from the Data Model database."
+  },
   "release": {
     "eyebrow": "RELEASE CHANNEL",
     "currentLabel": "Current",
@@ -155,9 +177,9 @@
     ]
   },
   "video": {
-    "eyebrow": "A SHORT INTRODUCTION",
+    "eyebrow": "THE MODEL, EXPLAINED",
     "title": "See the Data Model in context.",
-    "body": "The film waits until it is fully in view. It may autoplay muted once on this browser; after that, playback is always your choice.",
+    "body": "A short introduction to how a shared semantic foundation supports interoperability across border processes, systems and administrations.",
     "youtubeId": "UUn4YtzKnjs",
     "autoplayStorageKey": "wcoDmIntroAutoplaySeen-v2"
   },

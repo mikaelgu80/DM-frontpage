@@ -35,6 +35,7 @@
     set('executive-eyebrow', data.executive.eyebrow); set('executive-title', data.executive.title); set('executive-body', data.executive.body); set('executive-statement', data.executive.statement);
     set('principles-eyebrow', data.principles.eyebrow); set('principles-title', data.principles.title);
     set('architecture-eyebrow', data.architecture.eyebrow); set('architecture-title', data.architecture.title); set('architecture-body', data.architecture.body);
+    set('metrics-eyebrow', data.metrics?.eyebrow); set('metrics-title', data.metrics?.title); set('metrics-body', data.metrics?.body); set('metrics-note', data.metrics?.note);
     set('release-eyebrow', data.release.eyebrow); set('release-current-label', data.release.currentLabel); set('release-version', data.release.currentVersion);
     set('release-status', data.release.status); set('release-note', data.release.note);
     set('app-eyebrow', data.app.eyebrow); set('app-title', data.app.title); set('app-body', data.app.body);
@@ -57,6 +58,23 @@
       <article class="layer" data-reveal data-parallax="${0.005 + index * 0.004}">
         <span class="layer-label">${item.label}</span><h3>${item.title}</h3><p>${item.body}</p>
       </article>`).join('');
+
+    const metricFormat = new Intl.NumberFormat(document.documentElement.lang || undefined);
+    const metricValue = value => typeof value === 'number' ? metricFormat.format(value) : value;
+    const metricCounter = (value, className = '') => typeof value === 'number'
+      ? `<strong class="${className}" data-count-to="${value}">0</strong>`
+      : `<strong class="${className}">${metricValue(value)}</strong>`;
+
+    $('#metric-stream').innerHTML = (data.metrics?.items || []).map((item, index) => `
+      <article class="metric-item ${item.secondary ? 'has-secondary' : ''}" data-reveal>
+        <div class="metric-primary" data-parallax="${[0.006, -0.005, 0.004][index % 3]}">
+          ${metricCounter(item.primary.value, 'metric-number')}
+          <span class="metric-label">${item.primary.label}</span>
+        </div>
+        ${item.secondary ? `<div class="metric-secondary">${metricCounter(item.secondary.value)}<span>${item.secondary.label}</span></div>` : ''}
+      </article>`).join('');
+
+    setupMetricCounters(metricFormat);
 
     $('#primary-tools').innerHTML = data.app.primaryTools.map((item, index) => `
       <a class="tool-card" href="${item.href}" data-reveal>
@@ -102,6 +120,56 @@
       header.classList.toggle('over-light', r.top < header.offsetHeight * .58 && r.bottom > header.offsetHeight * .58);
     };
     update(); window.addEventListener('scroll', update, { passive:true }); window.addEventListener('resize', update);
+  }
+
+  function setupMetricCounters(formatter) {
+    const items = $$('.metric-item');
+    if (!items.length) return;
+
+    const setFinalValues = item => {
+      $$('[data-count-to]', item).forEach(el => {
+        el.textContent = formatter.format(Number(el.dataset.countTo));
+      });
+    };
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      items.forEach(setFinalValues);
+      return;
+    }
+
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    const animateItem = item => {
+      if (item.dataset.counted === 'true') return;
+      item.dataset.counted = 'true';
+
+      $$('[data-count-to]', item).forEach((el, index) => {
+        const target = Number(el.dataset.countTo);
+        if (!Number.isFinite(target)) return;
+
+        const duration = target >= 1000 ? 1550 : 1250;
+        const delay = index * 110;
+        const started = performance.now() + delay;
+
+        const tick = now => {
+          if (now < started) { requestAnimationFrame(tick); return; }
+          const progress = Math.min(1, (now - started) / duration);
+          const value = Math.round(target * easeOutCubic(progress));
+          el.textContent = formatter.format(value);
+          if (progress < 1) requestAnimationFrame(tick);
+          else el.textContent = formatter.format(target);
+        };
+
+        requestAnimationFrame(tick);
+      });
+    };
+
+    const io = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      animateItem(entry.target);
+      io.unobserve(entry.target);
+    }), { threshold: .34, rootMargin: '0px 0px -8% 0px' });
+
+    items.forEach(item => io.observe(item));
   }
 
   function setupReveal() {
