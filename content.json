@@ -97,17 +97,17 @@
     "items": [
       {
         "id": "elements",
-        "primary": {"value": 2134, "label": "unique elements"},
-        "secondary": {"value": 210, "label": "classes"}
+        "primary": {"value": 836, "label": "unique elements"},
+        "secondary": {"value": 273, "label": "classes"}
       },
       {
         "id": "informationPackages",
-        "primary": {"value": 2, "label": "base Information Packages"},
-        "secondary": {"value": 6, "label": "derived Information Packages"}
+        "primary": {"value": 4, "label": "base Information Packages"},
+        "secondary": {"value": 7, "label": "derived Information Packages"}
       },
       {
         "id": "nationalMappings",
-        "primary": {"value": 3, "label": "published national mappings"}
+        "primary": {"value": 21, "label": "published my Information Packages"}
       }
     ],
     "note": "Prototype values. In production, these figures can be populated directly from the Data Model database."
